@@ -65,12 +65,10 @@ def main():
     logging.info("STARTED")
     path_stories = args.input_stories
     stories = load_line_documents(path_stories)
-    stories = stories[:2]
     stories = process_newline(stories)
     stories = split_sentences(stories)
     path_prompts = args.input_prompts
     prompts = load_line_documents(path_prompts)
-    prompts = prompts[:2]
     prompts = clean_prompts(prompts)
 
     path_output = args.output
