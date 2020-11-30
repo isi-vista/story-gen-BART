@@ -1,2 +1,4 @@
 allennlp
 tqdm
+spacy
+allennlp_models
