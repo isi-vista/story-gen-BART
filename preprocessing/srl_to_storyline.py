@@ -379,8 +379,6 @@ def main():
         nlp.tokenizer.add_special_case(key, [dict(ORTH=key)])
 
     documents = load_stories(args.input_file)
-    # TODO: Remove after debugging
-    documents = documents[:2]
     logging.info(f"Loaded {len(documents)} stories!")
 
     docs_clusters = predict_coref(documents, args.coref_model, args.cuda, nlp)
