@@ -301,8 +301,9 @@ def predict_coref(documents, coref_model: str, cuda: int, nlp) -> List[Dict]:
             doc, clusters = coref_resolution(story, corefpredictor)
             all_json.append({"doc": doc, "clusters": clusters, "prompt": prompt})
 
-        except RuntimeError:
+        except RuntimeError as e:
             logging.info("Runtime Error")
+            logging.info(e)
     return all_json
 
 
